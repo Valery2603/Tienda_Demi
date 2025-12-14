@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['actualizar_cantidad']
 }
 
 // ----------------------------------------------------
-// Lógica para CONSULTAR los detalles completos (Opcional, pero recomendado)
+// Lógica para CONSULTAR los detalles completos
 // ----------------------------------------------------
 $productos_en_carrito = [];
 $total_general = 0;
@@ -99,8 +99,6 @@ $offset = ($pagina_actual - 1) * $productos_por_pagina;
 
 // Aplicar la paginación al array
 $productos_en_carrito = array_slice($productos_base, $offset, $productos_por_pagina);
-
-// ----------------------------------------------------
 
 incluirTemplates('header');
 incluirTemplates('nav');
