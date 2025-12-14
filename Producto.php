@@ -127,11 +127,11 @@
                 </div>
     
             </div>
-            <div class='col-12 col-md-5 p-4 mt-3 mb-3 mx-auto'>
+            <div class='col-12 col-md-5 p-4 mt-2 mb-3 mx-auto'>
                 <?php echo 
                 "<a class='categoria' href='Tienda.php?id=".$producto['id_categoria']."'>".$producto['nombre_categoria']."</a>" ?>
-                <h4 class='my-4'><?php echo $producto['descripcion']; ?></h4>
-                <p class='fs-2 fw-bold my-4'>S/<?php echo $producto['precio']; ?></p>
+                <h5 class='my-4'><?php echo $producto['descripcion']; ?></h5>
+                <p class='fs-2 fw-bold my-4'>S/.<?php echo $producto['precio']; ?></p>
 
                 <form action='Producto.php?id=<?php echo $id ?>' method='POST'> 
                     <input type='hidden' name='id_producto' value='<?php echo $producto['id_producto'];?>'> 

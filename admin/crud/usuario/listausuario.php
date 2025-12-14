@@ -38,7 +38,7 @@
     $total_paginas = ceil($total_usuarios / $usuarios_por_pagina);
     $search_param = !empty($busqueda) ? '&search='.urlencode($busqueda) : '';
 
-    // --- 3. Consulta para obtener los USUARIOS de la página actual ---
+    // 3. Consulta para obtener los USUARIOS de la página actual
     $consulta_base = 'SELECT 
                         u.id_usuario,
                         u.email, 

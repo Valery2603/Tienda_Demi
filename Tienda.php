@@ -78,7 +78,7 @@
                         <a class='fs-4' href='Producto.php?id=".$producto['id_producto']."'>".$producto['nombre']."</a>
                     </div>
                         
-                    <div class='text-center pt-3'><p class='text-center fs-4 fw-bold'>S/".$producto['precio']."</p></div>
+                    <div class='text-center pt-3'><p class='text-center fs-4 fw-bold'>S/.".$producto['precio']."</p></div>
                     
                     <form action='Tienda.php?id={$id}' method='POST'>
                         

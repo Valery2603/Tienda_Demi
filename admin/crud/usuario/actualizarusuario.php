@@ -139,18 +139,32 @@ if(isset($_POST['nombre'])){
                         </div>
 
                         <div class="botones col d-flex gap-5 pt-4 justify-content-center">
-                            <button type="submit" class="col-md-5 btn btn-success" >Actualizar
+                            <button type="submit" class="col-md-5 btn btn-success">Actualizar
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
                                     <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
                                 </svg>
                             </button>
 
-                            <button type="reset" class="col-md-5 btn btn-danger btn-limpiar">Limpiar
+                            <button type="reset" class="col-md-5 btn btn-danger" onclick="limpiarFormulario()">Limpiar
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                                     <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                                 </svg>
                             </button>
+                            <script>
+                                function limpiarFormulario() {
+                                    // Selecciona el formulario por su clase o ID y lo resetea
+                                    const formulario = document.querySelector('.formulario');
+                                    formulario.reset(); // Esto restaura a valores iniciales
+                                    
+                                    // Esto fuerza a que todos los inputs queden vacíos
+                                    const inputs = formulario.querySelectorAll('input');
+                                    inputs.forEach(input => input.value = '');
+                                    
+                                    const selects = formulario.querySelectorAll('select');
+                                    selects.forEach(select => select.selectedIndex = 0);
+                                }
+                            </script>
                         </div>
                     </div> 
                 </div>
