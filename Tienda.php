@@ -32,7 +32,7 @@
                     'cantidad' => $cantidad
                 ];
             }
-            // 3. Redirigir para evitar reenvío del formulario (patrón PRG)
+            // 3. Redirigir para evitar reenvío del formulario 
             
             header('Location: Tienda.php?id='.$id.'&agregado=1');
             exit();

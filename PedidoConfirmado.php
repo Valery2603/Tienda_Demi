@@ -4,7 +4,7 @@ require 'includes/funciones.php';
 // Obtener el total del URL 
 $total_pagado = filter_input(INPUT_GET, 'total', FILTER_VALIDATE_FLOAT);
 
-// Establecer un ID de pedido simulado (en un caso real, viene de la DB)
+// Establecer un ID de pedido simulado 
 $id_pedido_simulado = rand(100000, 999999);
 
 // Configurar el título y cargar el header
